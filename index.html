@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plataforma educativa y de investigación sobre los fundamentos, avances y aplicaciones de la Inteligencia Artificial.">
+    <title>Aetheria AI</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <nav class="page-container navbar__inner">
+            <a href="#" class="navbar__brand" aria-label="Página principal de Aetheria AI">
+                <svg class="navbar__logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
+                </svg>
+                <span>aetheria</span>
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="#fundamentos" class="navbar__link">Fundamentos</a></li>
+                    <li class="navbar__item"><a href="#modelos" class="navbar__link">Modelos & Arquitecturas</a></li>
+                    <li class="navbar__item"><a href="#aplicaciones" class="navbar__link">Aplicaciones Prácticas</a>
+                    </li>
+                    <li class="navbar__item"><a href="#etica" class="navbar__link">Ética & Seguridad</a></li>
+                </ul>
+            </nav>
+
+            <div class="navbar__actions">
+                <a href="#documentacion" class="button button--secondary">Documentación</a>
+                <a href="#empezar" class="button button--primary">Explorar Portal</a>
+                <button class="navbar__toggle" aria-label="Abrir menú de navegación" type="button">
+                    <span class="navbar__toggle-bar"></span>
+                    <span class="navbar__toggle-bar"></span>
+                    <span class="navbar__toggle-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="hero-carousel" aria-label="Conceptos Clave de la Inteligencia Artificial">
+            <div class="hero-carousel__viewport">
+                <!-- Slide 1: Introducción General -->
+                <article class="hero-carousel__slide hero-carousel__slide--active">
+                    <img src="./assets/img/slide-1.avif" alt="Visualización abstracta de nodos de red neuronal"
+                        class="hero-carousel__image">
+                    <div class="hero-carousel__content">
+                        <span class="hero-carousel__badge">Fundamento 01</span>
+                        <h1 class="hero-carousel__title">¿Qué es la Inteligencia Artificial Generativa?</h1>
+                        <p class="hero-carousel__description">La Inteligencia Artificial es el conjunto de tecnologías
+                            que permiten a los sistemas informáticos simular funciones cognitivas humanas, tales como el
+                            aprendizaje a partir de patrones de datos, el razonamiento deductivo y la generación
+                            autónoma de contenido textual, visual y analítico.</p>
+                        <a href="#fundamentos" class="button button--primary">Leer Explicación Completa</a>
+                    </div>
+                </article>
+
+                <!-- Slide 2: Modelos Lenguaje -->
+                <article class="hero-carousel__slide">
+                    <img src="./assets/img/slide-2.avif" alt="Red de código y modelos de lenguaje transformadores"
+                        class="hero-carousel__image">
+                    <div class="hero-carousel__content">
+                        <span class="hero-carousel__badge">Fundamento 02</span>
+                        <h2 class="hero-carousel__title">Modelos del Lenguaje (LLM) y Transformadores</h2>
+                        <p class="hero-carousel__description">Los Grandes Modelos de Lenguaje procesan secuencias de
+                            texto mediante mecanismos de atención para predecir la estructura semántica. Analizan miles
+                            de millones de parámetros para comprender el contexto lingüístico, traducir dialectos e
+                            interpretar instrucciones complejas.</p>
+                        <a href="#modelos" class="button button--primary">Conocer Arquitecturas</a>
+                    </div>
+                </article>
+
+                <!-- Slide 3: Visión Espacial -->
+                <article class="hero-carousel__slide">
+                    <img src="./assets/img/slide-3.avif" alt="Modelado de datos espaciales y visión computacional"
+                        class="hero-carousel__image">
+                    <div class="hero-carousel__content">
+                        <span class="hero-carousel__badge">Fundamento 03</span>
+                        <h2 class="hero-carousel__title">Visión por Computador y Agentes Autónomos</h2>
+                        <p class="hero-carousel__description">A través de redes neuronales convolucionales y modelos de
+                            difusión, los sistemas informáticos interpretan señales visuales del mundo real. Esto
+                            permite la navegación robótica autónoma, la reconstrucción tridimensional de escenas y el
+                            diagnóstico médico de precisión.</p>
+                        <a href="#aplicaciones" class="button button--primary">Ver Casos de Uso</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Lowered controls inside dedicated bottom-bar container -->
+            <div class="hero-carousel__bottom-bar">
+                <div class="hero-carousel__dots" role="tablist" aria-label="Seleccionar diapositiva">
+                    <button class="hero-carousel__dot hero-carousel__dot--active" role="tab" aria-selected="true"
+                        aria-label="Diapositiva 1 de 3" type="button"></button>
+                    <button class="hero-carousel__dot" role="tab" aria-selected="false" aria-label="Diapositiva 2 de 3"
+                        type="button"></button>
+                    <button class="hero-carousel__dot" role="tab" aria-selected="false" aria-label="Diapositiva 3 de 3"
+                        type="button"></button>
+                </div>
+
+                <div class="hero-carousel__controls">
+                    <button class="hero-carousel__arrow hero-carousel__arrow--prev" aria-label="Diapositiva anterior"
+                        type="button">&#8592;</button>
+                    <button class="hero-carousel__arrow hero-carousel__arrow--next" aria-label="Siguiente diapositiva"
+                        type="button">&#8594;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" id="fundamentos">
+            <div class="info-section__header">
+                <span class="info-section__tag">Bases Teóricas</span>
+                <h2 class="info-section__title">¿Cómo funciona la Inteligencia Artificial Moderna?</h2>
+                <p class="info-section__subtitle">Entiende los tres pilares fundamentales que han permitido la evolución
+                    desde algoritmos estadísticos tradicionales hacia la inteligencia sintética avanzada.</p>
+            </div>
+
+            <div class="info-section__grid">
+                <article class="info-section__card">
+                    <div class="info-section__card-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <h3 class="info-section__card-title">Aprendizaje Automático (Machine Learning)</h3>
+                    <p class="info-section__card-text">En lugar de seguir reglas rígidas programadas manualmente, las
+                        máquinas analizan conjuntos de datos masivos para identificar patrones latentes y realizar
+                        predicciones probabilísticas ante información totalmente nueva.</p>
+                </article>
+
+                <article class="info-section__card">
+                    <div class="info-section__card-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="info-section__card-title">Redes Neuronales Profundas (Deep Learning)</h3>
+                    <p class="info-section__card-text">Inspiradas en la estructura de la corteza cerebral, organizan
+                        nodos computacionales en múltiples capas abstractas capaces de procesar imágenes, ondas sonoras
+                        e imágenes médicas con jerarquías de significado extremo.</p>
+                </article>
+
+                <article class="info-section__card">
+                    <div class="info-section__card-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1v-2zM4 21a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1v-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="info-section__card-title">Alineamiento y Ética Algorítmica</h3>
+                    <p class="info-section__card-text">Garantizar que las decisiones automáticas respeten la privacidad,
+                        minimicen los sesgos históricos de entrenamiento y operen bajo criterios estrictos de
+                        transparencia y supervisión humana (Human-in-the-Loop).</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="showcase" id="modelos">
+            <div class="showcase__header">
+                <h2 class="showcase__title">Áreas de Impacto e Investigación de la IA</h2>
+                <a href="#todos" class="showcase__link">Explorar índice temático &rarr;</a>
+            </div>
+
+            <!-- Category filter pills -->
+            <div class="filter-pills" role="tablist" aria-label="Categorías de estudio">
+                <button class="filter-pills__button filter-pills__button--active" role="tab" aria-selected="true"
+                    type="button">Todos los dominios</button>
+                <button class="filter-pills__button" role="tab" aria-selected="false" type="button">Modelos de
+                    Lenguaje</button>
+                <button class="filter-pills__button" role="tab" aria-selected="false" type="button">Visión por
+                    Computador</button>
+                <button class="filter-pills__button" role="tab" aria-selected="false" type="button">Sintetización de
+                    Voz</button>
+                <button class="filter-pills__button" role="tab" aria-selected="false" type="button">Robótica &
+                    Agentes</button>
+                <button class="filter-pills__button" role="tab" aria-selected="false" type="button">Gobernanza &
+                    Ética</button>
+            </div>
+
+            <!-- Cards grid structure -->
+            <div class="cards-grid">
+                <!-- Main explanatory card (Large) -->
+                <div class="cards-grid__item cards-grid__item--large">
+                    <article class="studio-card">
+                        <div class="studio-card__image-container">
+                            <img src="./assets/img/card-1.avif" alt="Estructura matemática de modelo transformador"
+                                class="studio-card__image">
+                            <div class="studio-card__overlay"></div>
+                        </div>
+                        <div class="studio-card__content">
+                            <span class="studio-card__tag">Arquitectura Dominante</span>
+                            <div class="studio-card__header">
+                                <h3 class="studio-card__title">Modelos Multimodales Avanzados</h3>
+                                <span class="studio-card__badge" aria-label="Verificado">&#10003;</span>
+                            </div>
+                            <p class="studio-card__subtitle">Combinan simultáneamente el procesamiento de texto,
+                                imágenes y código para razonar contextualmente en problemas complejos sin requerir
+                                entrenamiento especializado por separado.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Secondary Card 1 -->
+                <div class="cards-grid__item cards-grid__item--medium">
+                    <article class="studio-card">
+                        <div class="studio-card__image-container">
+                            <img src="./assets/img/card-2.avif" alt="Análisis de patrones en visión computacional"
+                                class="studio-card__image">
+                            <div class="studio-card__overlay"></div>
+                        </div>
+                        <div class="studio-card__content">
+                            <span class="studio-card__tag">Procesamiento de Imagen</span>
+                            <div class="studio-card__header">
+                                <h3 class="studio-card__title">Reconocimiento Espacial</h3>
+                                <span class="studio-card__badge" aria-label="Verificado">&#10003;</span>
+                            </div>
+                            <p class="studio-card__subtitle">Detección precisa de objetos y diagnóstico médico asistido
+                                por imágenes.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Secondary Card 2 -->
+                <div class="cards-grid__item cards-grid__item--medium">
+                    <article class="studio-card">
+                        <div class="studio-card__image-container">
+                            <img src="./assets/img/card-3.jpg" alt="Patrones abstractos de datos sintéticos"
+                                class="studio-card__image">
+                            <div class="studio-card__overlay"></div>
+                        </div>
+                        <div class="studio-card__content">
+                            <span class="studio-card__tag">Ingeniería de Prompts</span>
+                            <div class="studio-card__header">
+                                <h3 class="studio-card__title">Optimización Contextual</h3>
+                                <span class="studio-card__badge" aria-label="Verificado">&#10003;</span>
+                            </div>
+                            <p class="studio-card__subtitle">Estructuración de instrucciones semánticas para obtener
+                                respuestas consistentes.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Bottom Row Card 1 -->
+                <div class="cards-grid__item">
+                    <article class="studio-card">
+                        <div class="studio-card__image-container">
+                            <img src="./assets/img/card-4.avif"
+                                alt="Visualización de flujo de agentes autónomos" class="studio-card__image">
+                            <div class="studio-card__overlay"></div>
+                        </div>
+                        <div class="studio-card__content">
+                            <span class="studio-card__tag">Sistemas Autónomos</span>
+                            <div class="studio-card__header">
+                                <h3 class="studio-card__title">Agentes de Razonamiento</h3>
+                                <span class="studio-card__badge" aria-label="Verificado">&#10003;</span>
+                            </div>
+                            <p class="studio-card__subtitle">Sistemas capaces de descomponer metas en pasos de acción
+                                autónomos.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Bottom Row Card 2 -->
+                <div class="cards-grid__item">
+                    <article class="studio-card">
+                        <div class="studio-card__image-container">
+                            <img src="./assets/img/card-5.avif"
+                                alt="Ondas de sonido e inteligencia de audio" class="studio-card__image">
+                            <div class="studio-card__overlay"></div>
+                        </div>
+                        <div class="studio-card__content">
+                            <span class="studio-card__tag">Síntesis de Audio</span>
+                            <div class="studio-card__header">
+                                <h3 class="studio-card__title">Modelos Neurona Voice</h3>
+                                <span class="studio-card__badge" aria-label="Verificado">&#10003;</span>
+                            </div>
+                            <p class="studio-card__subtitle">Generación de voz expresiva con naturalidad fonética
+                                ultrarrealista.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Bottom Row Card 3 -->
+                <div class="cards-grid__item">
+                    <article class="studio-card">
+                        <div class="studio-card__image-container">
+                            <img src="./assets/img/card-6.avif"
+                                alt="Seguridad y cifrado de modelos de IA" class="studio-card__image">
+                            <div class="studio-card__overlay"></div>
+                        </div>
+                        <div class="studio-card__content">
+                            <span class="studio-card__tag">Seguridad en IA</span>
+                            <div class="studio-card__header">
+                                <h3 class="studio-card__title">Gobernanza y Privacidad</h3>
+                                <span class="studio-card__badge" aria-label="Verificado">&#10003;</span>
+                            </div>
+                            <p class="studio-card__subtitle">Sistemas de protección de datos personales y explicabilidad
+                                algorítmica.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="etica">
+        <div class="page-container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-title">
+                        <svg class="navbar__logo-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
+                        </svg>
+                        <span>aetheria</span>
+                    </div>
+                    <p class="footer__brand-desc">Portal educativo global dedicado al análisis accesible, responsable y
+                        sistemático de la Inteligencia Artificial.</p>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Temáticas</h4>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Redes Neuronales</a></li>
+                        <li><a href="#" class="footer__link">Modelos de Lenguaje</a></li>
+                        <li><a href="#" class="footer__link">Visión Computacional</a></li>
+                        <li><a href="#" class="footer__link">Agentes Inteligentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Recursos</h4>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Guía para Principiantes</a></li>
+                        <li><a href="#" class="footer__link">Glosario de Términos</a></li>
+                        <li><a href="#" class="footer__link">Artículos de Ética</a></li>
+                        <li><a href="#" class="footer__link">Investigación Académica</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Plataforma</h4>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__link">Sobre el Proyecto</a></li>
+                        <li><a href="#" class="footer__link">Metodología</a></li>
+                        <li><a href="#" class="footer__link">Contacto & Sugerencias</a></li>
+                        <li><a href="#" class="footer__link">Política Editorial</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
